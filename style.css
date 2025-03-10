@@ -1,12 +1,200 @@
+/* Styles de base */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/fond2.jpg);
+    
+}
+ 
+header .menu { 
+/* forme barre menu */
+    display: flex;
     padding: 20px;
+    top: 10px;
+/*emplacement barre menu */
+    align-items: center;
+    justify-content: space-between; 
+    flex-direction: row;
+    background-color:transparent;
 }
 
-#weather {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    display: inline-block;
+.avatar { /* forme avatar */
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;  
+}
+
+.menuBtn { /* forme du bouton telecharger*/
+    background-color: transparent;
+    color: #e9e1e0;
+    text-decoration: none;
+    font-family: 'rubik';
+    padding: 20px 30px; 
+    border-radius: 0px 0px 10px 0px;
+    font-size: 18px;
+    display: flex;
+    align-items: center; 
+}
+
+.menuBtn:hover { /*animation buton telecharger au survol*/
+    padding-right: 15px;
+    padding-bottom: 15px;
+    color: #e9e1e0;
+    border-right: 3px solid#e9e1e0;
+    border-bottom: 2px solid #e9e1e0;
+    box-shadow: #e9e1e0;
+}
+
+/********************************************************* MAIN **********************************************************/
+
+main{ /*centrage de la carte de visite*/
+    display: flex;
+    justify-content: center;
+}
+
+.carte{ 
+    width: 600px;
+    height: 350px;
+/*emplacement*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+/* animation*/
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d; 
+    transition: transform 0.6s; 
+}
+
+
+
+/******************************* RECTO *******************************/
+.faceRecto{
+    background: linear-gradient(45deg, #1F1C2C, #928DAB, 0.3);
+    color:#e9e1e0;
+    border-radius: 15px;
+    padding: 20px;
+}
+ 
+ .faceRecto .texte{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: flex-start;
+ }
+ h1, h3, p{
+    padding: 5px;
+    margin: 5px;;
+ }
+ h1 {
+    font-size: 35px;
+    border-bottom: 1px solid white;
+  }
+  
+  h2 {
+    font-size: 18px;
+  }
+  
+  p, ul {
+    font-size: 14px;
+  }
+
+  /********************************VERSO*****************************/
+  .faceVerso {
+    background-color: #ded8d6;
+    color:#665d5b;
+    border-radius: 15px;
+    padding: 20px;
+    width: 600px;
+    height: 350px;
+/*emplacement texte*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d; 
+    transform: rotateY(180deg);  
+
+  }
+
+.faceVerso .reseaux { /* emplacement logo liens*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 30px;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+
+.btnReseaux:hover { /*animation buton telecharger au survol*/
+
+    box-shadow: 6px 6px 6px #302f2f;
+    color: black;
+    z-index: 4;
+}
+
+ /***********************************/
+
+.reseaux img { /*taille et forme logo*/
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+ 
+/***************************************Animation********************************************/
+
+.carte-container{ 
+    perspective: 1200px; 
+}
+
+.carte-container:hover .carte{
+    transform: rotateY(180deg);
+    transition: transform 0.8s ease-in-out;
+}
+.faceRecto,
+.faceVerso {
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(222, 216, 214, 0.3); /* 80% opaque */
+    color: white;
+    backdrop-filter: blur(5px);
+}
+
+/*****************************************responsive************************************/
+
+@media (max-width: 600px) {
+    .carte {
+        max-width: 300px;
+        height: 300px;
+    }
+
+    .faceRecto .photo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p, ul {
+        font-size: 12px;
+    }
+
+    .reseaux img {
+        width: 30px;
+        height: 30px;
+    }
 }

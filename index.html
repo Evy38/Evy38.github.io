@@ -1,28 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>Cécile MOREL</title>
+    <link rel="stylesheet" href="style.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Météo Transports</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
 </head>
 
-
 <body>
+    <header> 
+        <div class="menu"> 
 
-    <h1>Météo pour la ville de :  <span id="city-name"></span></h1>
+                <img src="images/avatar.jpg" alt="avatar" class="avatar">  <!-- AVATAR-->
 
-    <p> test modif</p>
 
-    
-    <div id="weather">
+                <a href="docs/CV_Cécile MOREL.pdf" download="CV-Cécile" target="_blank" class="menuBtn">  <!-- Bouton télécharger -->
+                    <span>Téléchargez mon CV</span>
+                </a>
+        </div>
+    </header>
 
-        <p id="temperature"></p>
-        <p id="description"></p>
+    <main>
 
+
+     <div class="carte-container">
+
+        <div class="carte">
+
+    <!--------------------------------------------- RECTO -------------------------------------------------------------->
+
+            <div class="faceRecto">
+
+                <div class="texte">
+                    <h1>Cécile MOREL</h1>
+                    <h3>En Reconversion Professionnelle</h3>
+                    <p>Formation Concepteur Développeur d'Application chez Simplon</p>
+                </div>
+            </div>
+
+    <!-------------------------------------------- VERSO -----------------------------------------------------------------> 
+
+            <div class="faceVerso">
+
+                <h2>Mes Motivations pour Intégrer Simplon :</h2>
+
+                    <ul>
+                        <li>Passion pour l'informatique</li>
+                        <li>Secteur dynamique</li>
+                        <li>Formation pratique et structurée</li>
+                        <li>Réussir ma reconversion</li>
+                        <li>Communauté solidaire</li>
+                        <li>Projets concrets</li>
+                        <li>Développement personnel</li>
+                    </ul>
+                    <div class="reseaux">
+                
+                        <a href="https://openclassrooms.com/fr/dashboard/courses" target="_blank" class="btnReseaux">
+                            <img src="images/Logo_OpenClassrooms.png" alt="OpenClassrooms"></a>
+
+                        <a href="https://www.codecademy.com/profiles/net9525277986" target="_blank" class="btnReseaux">
+                            <img src="images/Logo_CodeCademy.png" alt="Codecademy"></a>
+
+                        <a href="https://www.linkedin.com/in/c%C3%A9cile-morel-68230932b/" target="_blank" class="btnReseaux">
+                            <img src="images/Logo_LinkedIn.png" alt="LinkedIn"></a>
+
+                        <a href="https://www.sololearn.com/fr/profile/31673464" target="_blank" class="btnReseaux">
+                            <img src="images/Logo_SoloLearn.png" alt="SoloLearn"></a>
+                        
+                    </div>
+                
+            </div>
+        </div>
     </div>
 
-    <script src="meteo.js"></script>
+    </main>
+
+    <footer>
+        <!-- Footer sans contenu -->
+    </footer>
 
 </body>
 </html>
